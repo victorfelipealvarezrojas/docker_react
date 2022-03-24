@@ -9,6 +9,7 @@ RUN npm run build
 
 ## fase 2 de ejecucion
 From nginx:alpine
+EXPOSE 80
 ## copio la carpeta creada con su contenido en la fase anterior al este servicio de nginx
 COPY --from=builder /app/build /usr/share/nginx/html
 
